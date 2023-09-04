@@ -11,4 +11,9 @@ sh 'echo Helloworld'
 }
 }
 }
+post{
+always{
+sh 'echo Cleanup required'
+}
+}
 }
