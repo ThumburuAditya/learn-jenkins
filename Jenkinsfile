@@ -40,7 +40,8 @@ sh 'env'
 }
 post{
 always{
-sh 'echo Cleanup required'
+echo 'Cleanup required'
 }
 }
-}}
+}
+}
