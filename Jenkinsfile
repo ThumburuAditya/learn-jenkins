@@ -19,7 +19,7 @@ parameters{
 stages{
 stage('one'){
  input {
-                message "Should we continue?"
+                message "Do you want to continue?"
                 ok "Yes"
 }
 steps{
@@ -32,7 +32,7 @@ stage('Two'){
 when {
 expression {
 GIT_BRANCH == "origin/test"
-}}
+}
 }
 steps{
 sh 'env'
