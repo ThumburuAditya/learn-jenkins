@@ -38,6 +38,7 @@ steps{
 sh 'env'
 }
 }
+}
 post{
 always{
 echo 'Cleanup required'
