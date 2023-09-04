@@ -1,5 +1,7 @@
 pipeline{
-triggers{ cron('H/2 * * * *') }
+triggers{
+pollSCM('H/2 * * * *')
+}
 options {
         ansiColor('xterm')
     }
@@ -16,6 +18,10 @@ parameters{
  }
 stages{
 stage('one'){
+ input {
+                message "Should we continue?"
+                ok "Yes"
+}
 steps{
 sh 'echo Helloworld'
 sh 'echo ${sample_url}'
